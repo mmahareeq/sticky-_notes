@@ -1,9 +1,9 @@
-/**********************************************
+/***********************************************
 Project Title: Sticky Notes
 This project is an application where multiple users can store their notes on the computer, then retrieve them.
 Done by : Rahmeh Tartouri && Mariam Mahariq
 17/07/2019
-***********************************************/
+************************************************/
 
 #include<iostream>
 #include<string>
