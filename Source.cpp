@@ -15,7 +15,7 @@ int main()
 	string firstName ,  lastName , fileName;
 	ofstream UserFile;
 
-	cout << " Welcome to the brand new “Sticky Notes”!\n Here is the list of operation this program offers:\n1- Add new user\n2- Add new note\n3- View notes for a specific user\n4- Exit "  <<  endl;
+	cout << " Welcome to the brand new â€œSticky Notesâ€!\n Here is the list of operation this program offers:\n1- Add new user\n2- Add new note\n3- View notes for a specific user\n4- Exit "  <<  endl;
 
 	cout << " Enter the number : ";
 	cin >> number;
@@ -23,28 +23,28 @@ int main()
 	switch (number)
 	     {
 	         case 1: 
-				    cout << " Welcome aboard new user! "  <<  endl  <<  " Please let me know your first name : ";
-				    cin >> firstName;
-					cout << " Great " << firstName << " , now please enter your last name : ";
-					cin >> lastName; 
-					cout << " Done! "  <<  endl;
-					cout << " Nice to meet you " << firstName << " " << lastName << endl << endl;
-					cout << " <Click Enter to return to main menu> " << endl;
-					fileName = firstName + "-" + lastName +  ".txt" ; //crate file name
-					UserFile.open ( fileName ); //open file using user name 
-				    break;
+		        cout << " Welcome aboard new user! "  <<  endl  <<  " Please let me know your first name : ";
+		        cin >> firstName;
+		        cout << " Great " << firstName << " , now please enter your last name : ";
+			cin >> lastName; 
+			cout << " Done! "  <<  endl;
+			cout << " Nice to meet you " << firstName << " " << lastName << endl << endl;
+			cout << " <Click Enter to return to main menu> " << endl;
+			fileName = firstName + "-" + lastName +  ".txt" ; //crate file name
+			UserFile.open ( fileName ); //open file using user name 
+		        break;
 
 	         case 2:
 
-		            break;
+		        break;
 
 	         case  3:
 
-		            break;
+		         break;
 
 	         case 4:
-		            return 1;
-		            break;
+		         return 1;
+		         break;
 
 	         default:
 		            ;
