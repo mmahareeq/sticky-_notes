@@ -12,8 +12,10 @@ using namespace std;
 int main()
 {
 	int number;
-	string firstName ,  lastName , fileName;
-	ofstream UserFile;
+	string firstName ,  lastName , fileName, note;
+	ofstream userFile;
+	 time_t tt; 
+	 struct tm * ti;
 
 	cout << " Welcome to the brand new “Sticky Notes”!\n Here is the list of operation this program offers:\n1- Add new user\n2- Add new note\n3- View notes for a specific user\n4- Exit "  <<  endl;
 
