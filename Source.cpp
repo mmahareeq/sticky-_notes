@@ -8,15 +8,21 @@ Done by : Rahmeh Tartouri && Mariam Mahariq
 #include<iostream>
 #include<string>
 #include<fstream>
+#include<ctime>
+  
 using namespace std;
 int main()
-{
-	int number;
-	string firstName ,  lastName , fileName, note;
-	ofstream userFile;
+{ 
+  // declaring variable
+  int number;
+	string firstName ,  lastName , fileName, outdata, note;
+	ofstream userFile; 
+  ifstream userfile;
 	 time_t tt; 
 	 struct tm * ti;
-
+   bool rest = true ;
+  while(rest)
+  {
 	cout << " Welcome to the brand new “Sticky Notes”!\n Here is the list of operation this program offers:\n1- Add new user\n2- Add new note\n3- View notes for a specific user\n4- Exit "  <<  endl;
 
 	cout << " Enter the number : ";
@@ -81,6 +87,31 @@ int main()
 		        break;
 
 	         case  3:
+       cout << "Retrieve your notes? Absolutely!"  << endl << "Please let know your  full name first: ";
+					 cin.get();
+                                          getline(cin,fileName);
+					 fileName =  fileName + ".txt" ;
+					 userfile.open(fileName.c_str());  // open file                   
+					 if (userfile.fail()) // Check if file exists
+
+						 {
+							cout <<" Umm, can’t find any saved notes for you. "<< endl;
+						 }
+					 else
+						{
+						 cout << "Found it!"<<endl;
+						 cout << " Here are your stored notes: " << endl << " ------------------------ " << endl;
+						 while(!userfile.eof())
+						 { 
+
+						 getline( userfile , outdata);
+						 cout <<  endl <<outdata << endl;
+						 }
+						 cout <<" ------------------------  "<< endl;
+						 cout << " Happy to serve you :) " << endl;
+
+
+						 }
 
 		         break;
 
@@ -94,7 +125,7 @@ int main()
 
 
 
-
+  }
 	     }
 
 
@@ -107,3 +138,4 @@ int main()
 	return 0;
 
 }
+
